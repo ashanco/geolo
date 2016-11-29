@@ -1,24 +1,22 @@
 name:                geolo
 version:             0.1.0.0
--- synopsis:
--- description:
+-- synopsis:            
+-- description:         
 license:             MIT
 license-file:        LICENSE
 author:              Anders Storm Hansen
-maintainer:          ashapogios@gmail.com
--- copyright:
+maintainer:          ash@bruun-rasmussen.dk
+-- copyright:           
 category:            Web
 build-type:          Simple
--- extra-source-files:
+-- extra-source-files:  
 data-files:          geolite2-country.mmdb
 cabal-version:       >=1.10
 
 executable geolo
-  main-is:             Main.hs
-  -- other-modules:
-  -- other-extensions:
-  build-depends:       base >=4.8 && <4.9,
-                       geoip2,
-                       iproute
-  hs-source-dirs:      src
+  main-is:             src/Geolo.hs
+  -- other-modules:       
+  other-extensions:    DataKinds, DeriveGeneric, FlexibleInstances, GeneralizedNewtypeDeriving, MultiParamTypeClasses, OverloadedStrings, ScopedTypeVariables, TypeOperators
+  build-depends:       base >=4.8 && <4.9, base-compat >=0.9 && <0.10, mtl >=2.2 && <2.3, aeson, aeson-compat, attoparsec >=0.13 && <0.14, bytestring >=0.10 && <0.11, string-conversions >=0.4 && <0.5, time >=1.5 && <1.6, http-media >=0.6 && <0.7, wai, warp, servant-server >=0.4 && <0.5, directory >=1.2 && <1.3, blaze-markup >=0.7 && <0.8, blaze-html >=0.8 && <0.9, iproute, transformers, either, text, http-api-data, geoip2
+  -- hs-source-dirs:      
   default-language:    Haskell2010
